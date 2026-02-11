@@ -28,6 +28,11 @@ class Parte1Exercicio4Controller extends Controller
 
         $arrayImpares = [];
 
+        $arrayImpares = $this->megasena
+            ->filter(fn($numero) => $numero % 2 !== 0)
+            ->values()
+            ->all();
+
         return $arrayImpares;
     }
 }

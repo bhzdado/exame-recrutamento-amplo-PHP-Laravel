@@ -60,6 +60,12 @@ class Parte1Exercicio6Controller extends Controller
     {
         //Ordene em ordem crescente a lista estudantes acima por matrícula
 
-        return $this->estudantes;
+        usort(
+            $this->estudantes,
+            fn(Estudante $a, Estudante $b) =>
+            $a->getMatricula() <=> $b->getMatricula()
+        );
+
+        return array_map(fn(Estudante $estudante) => $estudante->toArray(), $this->estudantes);
     }
 }

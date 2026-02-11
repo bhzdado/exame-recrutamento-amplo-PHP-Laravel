@@ -42,6 +42,11 @@ class Parte1Exercicio8Controller extends Controller
 
         $map = [];
 
+        foreach ($this->musicos as $index => $musico) {
+            $cancoesMusico = $this->cancoes[$index];
+            sort($cancoesMusico);
+            $map[$musico] = $cancoesMusico;
+        }
         
         return $map;
     }

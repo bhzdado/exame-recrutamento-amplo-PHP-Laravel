@@ -21,6 +21,12 @@ class Parte1Exercicio3Controller extends Controller
 
         $maiorNumero = 0;
 
+        foreach ($this->numerosAleatorios as $numero) {
+            if ($numero > $maiorNumero) {
+                $maiorNumero = $numero;
+            }
+        }
+
 		return $maiorNumero;
     }
 }

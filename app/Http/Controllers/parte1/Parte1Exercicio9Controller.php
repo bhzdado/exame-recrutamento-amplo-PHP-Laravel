@@ -32,6 +32,41 @@ class Parte1Exercicio9Controller extends Controller
 
         $listaDeCompras = collect([]);
 
-        return $listaDeCompras; 
+        $arquivo = storage_path('lista-de-compras.txt');
+
+        if (file_exists($arquivo)) {
+            $linhas = \array_slice(
+                file(
+                    $arquivo, 
+                    FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES
+                ), 2
+            );
+
+            foreach ($linhas as $linha) {
+                if (!str_contains($linha, ';')) {
+                    continue;
+                }
+
+                $partes = explode(';', $linha);
+                $nomeProduto = trim(string: $partes[0]);
+                $quantidade = isset($partes[1]) ? trim($partes[1]) : '1';
+                $possui = strtoupper(trim($partes[2] ?? 'N'));
+
+                if ($possui !== 'S') {
+                    $possui = 'N';
+                }
+
+                if ($possui === 'N') {
+                    $listaDeCompras->push([
+                        'nome' => $nomeProduto,
+                        'quantidade' => $quantidade
+                    ]);
+                }
+            }
+
+            $listaDeCompras = $listaDeCompras->sortBy('nome')->values()->all();
+        }
+
+        return $listaDeCompras;
     }
 }

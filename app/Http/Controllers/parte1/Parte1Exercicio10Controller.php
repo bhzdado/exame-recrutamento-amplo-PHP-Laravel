@@ -37,6 +37,20 @@ class Parte1Exercicio10Controller extends Controller
 
         $numerosArredondados = [];
 
+        foreach ($this->numerosDaSorte as $numero) {
+            $parteDecimal = $numero - floor($numero);
+            if ($parteDecimal < 0.5) {
+                $arredondado = ceil($numero);
+            } elseif ($parteDecimal > 0.5) {
+                $arredondado = floor($numero);
+            } else {
+                $arredondado = $numero;
+            }
+            $numerosArredondados[] = "$numero => $arredondado";
+        }
+
+        File::put($this->basePath, implode(PHP_EOL, $numerosArredondados));
+
         return response("Arquivo gerado com sucesso.");
     }
 }
