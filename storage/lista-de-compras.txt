@@ -1,0 +1,20 @@
+LISTA DE COMPRAS.
+ITEM ; QUANTIDADE; JA POSSUI
+
+Sabão Líquido;1 ;N
+Arroz 5kg;1;S
+Detergente;1;N
+Iogurte;3;N
+Açúcar cristal 2kg;1; S
+Quejo;1;S
+Pão de forma 400g;1;S
+Pão Francês;6;N
+Manteiga; 1;N
+Maçã;4;S
+Banana;6;S
+
+------------------------------------
+
+Sabonete;2
+Esponja para louça;1
+Macarrão 500g;1;
