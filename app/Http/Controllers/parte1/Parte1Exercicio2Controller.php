@@ -20,6 +20,9 @@ class Parte1Exercicio2Controller extends Controller
         //Escreva abaixo um código que armazene as idades ordenadas crescentemente da lista acima no array (idadesArray) abaixo:
         $idadesArray = [];
 
+        $idadesArray = $this->idade;
+        sort($idadesArray);
+
         return $idadesArray;
     }
 }

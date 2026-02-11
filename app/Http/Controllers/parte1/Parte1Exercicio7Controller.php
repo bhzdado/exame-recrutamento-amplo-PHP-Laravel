@@ -25,6 +25,22 @@ class Parte1Exercicio7Controller extends Controller
 
         $calendario = [];
 
+        for ($mes = 0; $mes < 12; $mes++) {
+
+            if ($mes === 1) {
+                // Fevereiro
+                $dias = 28;
+            } elseif ($mes < 7) {
+                // Janeiro a Julho
+                $dias = ($mes % 2 === 0) ? 31 : 30;
+            } else {
+                // Agosto a Dezembro
+                $dias = ($mes % 2 === 1) ? 31 : 30;
+            }
+
+            $calendario[$mes] = range(1, $dias);
+        }
+
         return $calendario;
     }
 }

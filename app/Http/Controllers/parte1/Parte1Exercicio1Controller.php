@@ -17,5 +17,7 @@ class Parte1Exercicio1Controller extends Controller
     public function __invoke(Request $request)
     {
         //Escreva abaixo um código que retorne (como você preferir) todos os números da lista de idades acima, separados por '-' sem espaços.
+
+        return implode('-', $this->idade);
     }
 }

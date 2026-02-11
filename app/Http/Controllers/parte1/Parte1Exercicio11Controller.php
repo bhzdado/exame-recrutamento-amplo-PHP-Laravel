@@ -37,6 +37,31 @@ class Parte1Exercicio11Controller extends Controller
 
         $map = [];
 
+        $anoAtual = (int) date('Y');
+
+        for ($ano = $anoAtual; $ano <= $anoAtual + 10; $ano++) {
+
+            // Verifica se o ano é bissexto
+            $bissexto = $ano % 400 === 0 || ($ano % 4 === 0 && $ano % 100 !== 0);
+
+            $meses = [];
+
+            for ($mes = 0; $mes < 12; $mes++) {
+
+                if ($mes === 1) {
+                    $dias = $bissexto ? 29 : 28;
+                } elseif ($mes < 7) {
+                    $dias = ($mes % 2 === 0) ? 31 : 30;
+                } else {
+                    $dias = ($mes % 2 === 1) ? 31 : 30;
+                }
+
+                $meses[$mes] = range(1, $dias);
+            }
+
+            $map[$ano] = $meses;
+        }
+
         return $map;
     }
 }
