@@ -68,15 +68,15 @@ Finalizados os exercícios, realize o commit e push para sua branch.
 
 Você poderá checar o resultado do exame através da aba Actions:
 
-![image](https://github.com/prodemge-mg/exame-recrutamento-amplo-PHP-Laravel/public/images/143089910/47c6d6f4-d05a-4a8e-a6b2-68b6098f147d)
+![image](https://github.com/prodemge-mg/exame-recrutamento-amplo-PHP-Laravel/public/images/47c6d6f4-d05a-4a8e-a6b2-68b6098f147d.png)
 
 Feito isso, basta clicar no workflow **Check Publish**, e ao lado clicar no commit feito por você.
 
-![image](https://github.com/prodemge-mg/exame-recrutamento-amplo-PHP-Laravel/public/images/143089910/675440e3-3209-4fc0-b789-9aa2cf03e060)
+![image](https://github.com/prodemge-mg/exame-recrutamento-amplo-PHP-Laravel/public/images/675440e3-3209-4fc0-b789-9aa2cf03e060.png)
 
 Aguarde o build da aplicação para verificar o resultado de seu exame:
 
-![image](https://github.com/prodemge-mg/exame-recrutamento-amplo-PHP-Laravel/public/images/143089910/5638fb2f-22a6-43fe-b19b-533d07570d26)
+![image](https://github.com/prodemge-mg/exame-recrutamento-amplo-PHP-Laravel/public/images/5638fb2f-22a6-43fe-b19b-533d07570d26.png)
 
 Caso tenha terminado os exames prático e teórico, basta informar ao responsável.
 
